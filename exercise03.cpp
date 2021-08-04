@@ -4,11 +4,23 @@ using namespace std;
 
 int volume(int height, int width, int length);
 
+struct box
+{
+  int Height;
+  int Width;
+  int Length;
+}
+box1,box2;
 // 1. Define a structure called Box
 // have the integer data types Height, Width, Length
 
 // Do not change the main function
-int main() {
+int main()
+ {
+   struct box box1;
+   int box1Height , box1Width , box1Length;
+   int box2Height , box2Width , box2Length;
+
     // 2. Create a variable called box1 of the Box structure type
     // int box1Height, box1Width, box1Length;
     // 3. Create a variable called box2 of the Box structure type
@@ -32,8 +44,8 @@ int main() {
     cin >> Length of Box 2;
     
     // 5. Replace the coding below to pass the Box type structure
-    totalVolume = volume( , , )
-             + volume( , , );
+    totalVolume = volume(box1Height , box1Length,box1Width )
+             + volume( box2Height,box2Length ,box2Width );
     
     cout << "Volume of Box is " << totalVolume << endl;
     
@@ -41,3 +53,7 @@ int main() {
 }
 
 // Implement the functions here
+int volume(int height , int width , int length);
+{
+  return height * width * length;
+}
